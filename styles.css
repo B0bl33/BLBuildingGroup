@@ -1,0 +1,247 @@
+/* General styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Default body font */
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif; /* Font for h1 */
+    font-weight: 700; /* Bold weight for h1 */
+}
+
+/* Header styles */
+header {
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar {
+    padding: 20px;
+}
+
+/* Navbar brand styles */
+.navbar-brand h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #ff3333;
+    animation: slideIn 2s ease-in-out; /* Apply the slide in animation */
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Navbar link styles */
+.nav-link {
+    font-size: 1rem;
+    padding: 10px 20px;
+    color: #ff3333 !important;
+}
+
+.nav-link:hover {
+    background-color: #ff3333; /* Light gray background on hover */
+    border-radius: 5px; /* Rounded corners */
+    color: white !important;
+}
+
+/* Disabled link style */
+.nav-link.disabled {
+    color: #6c757d !important; /* Gray color for disabled link */
+}
+
+/* Custom styles for the navbar-toggler */
+.navbar-toggler.custom-toggler {
+    border: 2px solid #ff0000; /* Custom border color */
+}
+
+.navbar-toggler.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Custom icon color */
+}
+
+/* Hero Section styles */
+.hero-section {
+    background: url('herobuild.png') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Black overlay with opacity */
+    z-index: 1;
+}
+
+.hero-section h1 {
+    font-weight: 500;
+    font-size: 4.5rem;
+    
+}
+
+.hero-section a {
+    background-color: #ff3333;
+    border: none;
+}
+
+.hero-section a:hover {
+    background-color: white;
+    color: #ff3333;
+}
+
+/* Custom button styles */
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active {
+    background-color: #ff3333 !important;
+    border-color: #ff3333 !important;
+    box-shadow: none !important; /* Remove default shadow */
+}
+
+/* Services Section styles */
+
+li {
+    list-style: none;
+}
+
+.services-section h2, .about-section h2, .carousel-map-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #ff3333;
+    font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.card {
+    height: 100%;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: border 0.6s ease-in-out;
+}
+
+.card-img-top {
+    height: 300px; /* Set a fixed height for images */
+    object-fit: cover; /* Ensure images cover the container without stretching */
+    
+}
+
+.services-section .card-title {
+    font-family: 'Montserrat', sans-serif;
+    color: #ff3333;
+    font-weight: 700;
+    font-size: 1.5rem;
+    animation: pulse 2s infinite; /* Add animation to h5 headings */
+    margin-bottom: 20px;
+}
+.about-section .card-title {
+    font-family: 'Montserrat', sans-serif;
+    color: #ff3333;
+    font-weight: 700;
+    font-size: 1rem;
+    
+    margin-bottom: 20px;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.card-text {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-body p {
+    flex-grow: 1;
+}
+
+.card-body .btn {
+    background-color: #ff3333;
+    border: none;
+}
+
+.card-body .btn:hover {
+    background-color: white;
+    color: #ff3333;
+    border: 1px solid #ff3333;
+}
+.text-center ul {
+    padding-left: 0 !important;
+    font-weight: bold;
+}
+
+/* Star rating styles */
+.checked {
+    color: orange;
+}
+.about-section .card:hover {
+    border: solid #ff3333;
+}
+
+
+.about-section a {
+    background-color: #ff3333;
+    border: none;
+    margin: 20px;
+}
+
+.about-section a:hover {
+    background-color: white;
+    color: #ff3333;
+}
+.about-section {
+    padding-top: 0 !important;
+}
+
+/* Custom styles for the carousel and map section */
+.carousel-map-section {
+    background-color: #ffffff;
+}
+
+.shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item img {
+    height: 400px; /* Ensure a consistent height for all images */
+    object-fit: cover; /* Ensure images cover the container without stretching */
+}
+
+.map-container {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
